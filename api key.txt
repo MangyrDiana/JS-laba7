@@ -1,6 +1,1 @@
 7340545d7c7370a2878a13614f173c
-                        '<p>Дата:' + data[i].local_date + '</p><br>' +
-                        '<p>Время:' + data[i].local_time + '</p><br>' +
-                        '<p>Место проведения:' data[i].venue.address_1 + '</p><br>' +
-                        '<p>Телефон:' data[i].venue.phone + '</p><br>' +
-                        '<p>Описание:' + data[i].description + '</p><br>' +
