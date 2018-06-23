@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Лабораторная работа № 7</title>
+	<script type="text/javascript" src='node_modules/jquery/dist/jquery.min.js'></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Встречи в Нью-Йорке</h1>
+<script>
+	$.ajax({
+		url:'https://api.meetup.com/find/upcoming_events?key=7340545d7c7370a2878a13614f173c&end_date_range=2018-12-31T00:00:00&text=cloud&radius=100&lon=-74.01&lat=40.71&page=1000',
+		method: 'GET',
+		dataType: 'JSONP',
+		success: function(array) {
+			data = array.data.events;
+				console.log(data);
+				for (i=0; i < data.length; i++) {
+                    $('.container').append( 
+                        '<h2>' + data[i].name + '</h2><br>' +
+                        '<p>Дата:' + data[i].local_date + '<strong></p><br>' +
+                        '<p>Время:' + data[i].local_time + '<strong></p><br>' +
+                        '<p>Место проведения:' + data[i].venue.address_1 + '<strong></p><br>' +
+                        '<p>Описание:' + data[i].description + '></p><br>' 
+                    );
+				}
+			}
+		
+	})
+</script>
+
+<div class="container"></div>
+</body>
+</html>

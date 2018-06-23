@@ -1,0 +1,18 @@
+body {
+	text-align: center;
+	background-color: #fff;
+	font-size: 20px;
+	background-image: linear-gradient( #68f8ff69, #fff81e69);
+	background-size: cover;
+	background-attachment: fixed;
+}
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	border: 1px solid black;
+	padding: 10px;
+	background: rgba(255,255,255,.6);
+}
+h1{
+	text-align: center;
+}
